@@ -1,0 +1,39 @@
+main {
+  color: var(--text-primary);
+  display: block;
+  height: auto;
+  padding-top: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+.credits-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: left;
+}
+
+.credits-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.credit-item {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--text-secondary);
+  padding: 1rem;
+}
+
+.credit-item a {
+  display: block;
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+.credit-item:hover {
+  background-color: var(--help-col-blue);
+}

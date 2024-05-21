@@ -1,0 +1,16 @@
+.construction-container {
+  text-align: center;
+  color: var(--text-primary);
+  padding-top: 70px;
+  flex: 1;
+}
+
+#all-pets {
+  color: var(--bg-secondary);
+  filter: grayscale(0%) opacity(1);
+}
+
+.all-pets {
+  display: flex;
+  justify-content: center;
+}

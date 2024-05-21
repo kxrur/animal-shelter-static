@@ -1,0 +1,25 @@
+main {
+  display: block;
+  height: auto;
+  margin: 2rem;
+  padding: 5rem;
+  color: var(--text-primary);
+}
+.block-text {
+  margin: 1rem 1rem;
+  padding: 1rem;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+main p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5em;
+}
+main a {
+  text-decoration: none;
+  color: var(--help-col-pink);
+}
+main a:hover {
+  color: var(--text-primary);
+}

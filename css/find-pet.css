@@ -1,0 +1,163 @@
+#find-pet {
+  color: var(--bg-secondary);
+  filter: grayscale(0%) opacity(1);
+}
+.title {
+  margin-top: -2rem;
+  margin-left: 4rem;
+}
+
+main {
+  margin-left: 50vh;
+}
+.form-container {
+  text-align: center;
+  color: var(--text-primary);
+  padding-top: 70px;
+  flex: 1;
+  padding-right: 5rem;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-container div {
+  margin-bottom: 1rem;
+}
+.form-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+.form-container span {
+  color: var(--text-primary);
+}
+.form-container select {
+  width: 75%;
+  padding: 0.8rem;
+  border: 1px solid var(--text-primary);
+  border-radius: 1rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  margin-top: 0.1rem;
+}
+.compatibility-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem; /* Adjust the margin as needed */
+}
+.ask {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  background-color: var(--text-primary);
+  color: var(--text-secondary);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--text-secondary);
+  margin-right: 1.5rem;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  background-color: var(--text-secondary);
+  accent-color: var(--help-col-blue);
+}
+
+.drop-down div {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 14rem;
+  margin-left: -12rem;
+}
+.drop-down label {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.form-container select {
+  margin: 1rem;
+  border: 1px solid var(--text-primary);
+  border-radius: 1rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: var(--font-size);
+}
+.form-container option {
+  background-color: var(--text-primary);
+  color: var(--text-secondary);
+}
+.radio-image {
+  height: 5rem;
+  margin-left: auto;
+}
+
+.animal-type-container {
+  display: flex;
+  align-items: center;
+}
+
+.animal-type-container label {
+  margin-right: 20px;
+  display: flex;
+}
+
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type="radio"] + img {
+  cursor: pointer;
+  transition: background-color var(-transition-speed) ease;
+  border-radius: 1rem;
+}
+
+[type="radio"][value="cat"]:checked + img {
+  background-color: var(--bg-secondary);
+}
+[type="radio"][value="dog"]:checked + img {
+  background-color: var(--help-col-blue);
+}
+
+[type="radio"] + i {
+  cursor: pointer;
+  transition: background-color var(-transition-speed) ease;
+  color: var(--text-primary);
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+[type="radio"]:checked + i {
+  color: var(--help-col-pink);
+}
+
+.form-container {
+  text-align: left;
+  padding-top: 70px;
+  padding-left: 100px;
+}
+
+.find-pet-form label {
+  display: inline-block;
+  padding: 1rem 0px 1rem;
+}
+.controls-container {
+  margin-top: 5rem;
+  margin-left: 5rem;
+}

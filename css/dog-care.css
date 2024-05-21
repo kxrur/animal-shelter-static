@@ -1,0 +1,50 @@
+#dog-care {
+  color: var(--bg-secondary);
+  filter: grayscale(0%) opacity(1);
+}
+.sections-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+.sections-container a {
+  text-decoration: none;
+  color: var(--help-col-pink);
+}
+#diet {
+  margin-top: 2rem;
+}
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.image-container img {
+  width: 12rem;
+  position: absolute;
+}
+.left-image1 {
+  top: 20%;
+}
+.left-image2 {
+  top: 60%;
+}
+.right-image1 {
+  top: 30%;
+}
+.right-image2 {
+  top: 60%;
+}
+
+.left-image1,
+.left-image2 {
+  left: 200px;
+}
+
+.right-image1,
+.right-image2 {
+  right: 150px;
+}

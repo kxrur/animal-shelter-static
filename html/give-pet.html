@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>GetAPet</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../css/main.css" rel="stylesheet" />
+    <link href="../css/give-pet.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="../assets/icon.svg" />
+    <script src="../scripts/give-pet-validate.js"></script>
+    <script src="../scripts/display-time.js"></script>
+  </head>
+
+  <body>
+    <div class="bg-img"></div>
+    <header>
+      <div class="logo-row">
+        <a href="./home.html">
+          <img src="../assets/logo.png" alt="logo" class="logo" />
+        </a>
+      </div>
+    </header>
+    <main class="form-container">
+      <form class="find-pet-form" id="give-pet-form">
+        <h1 class="title">
+          Give a Pet
+          <i class="fa-solid fa-heart"></i>
+        </h1>
+        <!-- https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons -->
+        <div class="animal-type-container">
+          <label class="ask">Select an animal</label>
+          <label>
+            <input type="radio" name="type" value="cat" checked />
+            <img src="../assets/cat-bg.png" alt="cat" class="radio-image" />
+          </label>
+          <label>
+            <input type="radio" name="type" value="dog" />
+            <img src="../assets/dog-bg.png" alt="dog" class="radio-image" />
+          </label>
+        </div>
+        <p id="error-message"></p>
+
+        <div class="drop-down">
+          <div class="animal-breed-container">
+            <label for="breed" class="ask">Select a breed</label>
+            <select id="breed" name="breed">
+              <optgroup label="Dog Breeds">
+                <option value="labrador-retriever">Labrador Retriever</option>
+                <option value="german-shepherd">German Shepherd</option>
+                <option value="golden-retriever">Golden Retriever</option>
+              </optgroup>
+              <optgroup label="Cat Breeds">
+                <option value="persian-cat">Persian</option>
+                <option value="siamese-cat">Siamese</option>
+                <option value="maine-coon-cat">Maine</option>
+              </optgroup>
+              <option value="any">Doesn't matter</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="age" class="ask">Preferred age</label>
+            <select id="age" name="age">
+              <option value="puppy">Puppy/Kitten</option>
+              <option value="adult">Adult</option>
+              <option value="senior">Senior</option>
+              <option value="any">Doesn't matter</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="gender-container">
+          <label class="ask">Preferred gender</label>
+          <label>
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              id="female-rb"
+              checked
+            />
+            <i class="fa-solid fa-venus fa-2x" title="female"></i>
+          </label>
+          <label>
+            <input type="radio" name="gender" value="male" id="male" />
+            <i class="fa-solid fa-mars fa-2x" title="male"></i>
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="gender"
+              value="male-female"
+              id="male-female-rb"
+            />
+            <i class="fa-solid fa-venus-mars fa-2x" title="male and female"></i>
+          </label>
+        </div>
+
+        <div class="compatibility-container">
+          <label class="ask">Compatibility with other members</label>
+          <div class="compatibility-input-container">
+            <input
+              type="checkbox"
+              id="other-dogs"
+              name="compatibility"
+              value="other-dogs"
+            />
+            <label for="other-dogs">Loves dogs</label>
+            <input
+              type="checkbox"
+              id="other-cats"
+              name="compatibility"
+              value="other-cats"
+            />
+            <label for="other-cats">Loves cats</label>
+            <input
+              type="checkbox"
+              id="small-children"
+              name="compatibility"
+              value="small-children"
+            />
+            <label for="small-children">Loves children</label>
+          </div>
+        </div>
+        <div class="comments-container">
+          <label for="comments" class="ask">Describe your Pet</label>
+          <textarea id="comments" name="comments" rows="4" required></textarea>
+        </div>
+
+        <div class="owner-info-container">
+          <div>
+            <label for="owner-name" class="ask">Owner's name</label>
+            <input type="text" id="owner-name" name="owner-name" required />
+          </div>
+
+          <div>
+            <label for="owner-email" class="ask">Owner's email</label>
+            <input type="email" id="owner-email" name="owner-email" required />
+          </div>
+        </div>
+
+        <div class="controls-container">
+          <button type="submit">Submit</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+    </main>
+    <nav class="sidebar">
+      <ul class="sidebar-bar">
+        <li class="bar-item">
+          <a href="./home.html" id="home" class="bar-anchor">
+            <i class="fa fa-home fa-2x"></i>
+            <span class="bar-text">Home</span>
+          </a>
+        </li>
+        <li class="bar-item">
+          <a href="./all-pets.html" id="all-pets" class="bar-anchor">
+            <i class="fa fa-paw fa-2x"></i>
+            <span class="bar-text">Browse Pets</span>
+          </a>
+        </li>
+        <li class="bar-item">
+          <a href="./find-pet.html" id="find-pet" class="bar-anchor">
+            <i class="fa fa-search fa-2x"></i>
+            <span class="bar-text">Find Pets</span>
+          </a>
+        </li>
+        <li class="bar-item">
+          <a href="cat-care.html" id="cat-care" class="bar-anchor">
+            <i class="fa fa-cat fa-2x"></i>
+            <span class="bar-text">Cat Care</span>
+          </a>
+        </li>
+        <li class="bar-item">
+          <a href="dog-care.html" id="dog-care" class="bar-anchor">
+            <i class="fa fa-dog fa-2x"></i>
+            <span class="bar-text">Dog Care</span>
+          </a>
+        </li>
+        <li class="bar-item">
+          <a href="give-pet.html" id="give-pet" class="bar-anchor">
+            <i class="fa-solid fa-hand-holding-heart fa-2x"></i>
+            <span class="bar-text">Give Pet</span>
+          </a>
+        </li>
+        <li class="bar-item">
+          <a href="contact.html" id="contact" class="bar-anchor">
+            <i class="fa-solid fa-envelopes-bulk fa-2x"></i>
+            <span class="bar-text">Contact Us</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer-basic">
+      <footer>
+        <div class="social">
+          <a href="https://twitter.com/" target="_blank">
+            <i class="fa-brands fa-twitter"></i> </a
+          ><a href="https://github.com/kxrur/" target="_blank"
+            ><i class="fa-brands fa-github"></i></a
+          ><a href="https://www.linkedin.com/" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="./credits.html">Credits</a></li>
+          <li class="list-inline-item">
+            <a href="./privacy.html">Privacy Policy</a>
+          </li>
+        </ul>
+        <p class="copyright">GetAPet © 2024</p>
+      </footer>
+    </div>
+  </body>
+</html>
